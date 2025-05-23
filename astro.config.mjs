@@ -54,6 +54,6 @@ export default defineConfig({
 			},
 		},
 	},
-	site: 'https://kia.alexsab.ru',
+	site: 'https://promo.kia-samara.ru',
 	base: "/"
 });

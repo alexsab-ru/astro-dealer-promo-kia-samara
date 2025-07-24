@@ -5,7 +5,7 @@ import Checkbox from '@/components/Checkbox/Checkbox.astro';
 import Input from '@/components/Input.astro';
 import ChoosingDealerSelect from '@/components/ChoosingDealerSelect/ChoosingDealerSelect.astro';
 import settings from '@/data/settings.json';
-export const { site_name, phone_common, brand } = settings;
+const { site_name, brand, phone_common, legal_entity, legal_inn, legal_city } = settings;
 import {AGREE_LABEL} from '@/const';
 import salonsData from '@/data/salons.json';
 const salons = salonsData.filter(salon => !salon.type || salon.type.includes('import'));
@@ -26,9 +26,9 @@ const salons = salonsData.filter(salon => !salon.type || salon.type.includes('im
 	>
 		<div x-show="$store.import.step === 0">
 			<ul>
-				<li> - 18 лет дилерства в Самаре</li>
-				<li> - Надежная сделка</li>
-				<li> - Гарантия от партнеров для СВОИХ</li>
+				<li>18 лет дилерства в Самаре</li>
+				<li>Надежная сделка</li>
+				<li>Гарантия от партнеров для СВОИХ</li>
 			</ul>
 		
 			<Button 
@@ -133,7 +133,7 @@ const salons = salonsData.filter(salon => !salon.type || salon.type.includes('im
 		</div>
 
 		<div class="space-y-6 max-w-screen-sm w-full mx-auto mb-5" x-show="$store.import.step === 3">
-			<ul class="space-y-5">
+			<ul class="space-y-5 list-none">
 				<li class="flex items-end justify-between leading-none"><span>Модель</span><span class="flex-grow border-b border-dotted"></span><span class="font-bold" x-text="$store.import.brand + ' ' + $store.import.model"></span>
 				</li>
 				<li class="flex items-end justify-between leading-none"><span>Комплектация</span><span class="flex-grow border-b border-dotted"></span><span class="font-bold" x-text="$store.import.complectation"></span>

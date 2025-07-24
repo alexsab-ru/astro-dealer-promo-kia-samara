@@ -2,7 +2,7 @@
 import PageLayout from "@/layouts/PageLayout.astro";
 import { getCollection } from "astro:content";
 import settings from '@/data/settings.json';
-export const { site_name, phone_common, brand, legal_city_where } = settings;
+const { site_name, brand, phone_common, legal_city_where } = settings;
 import CarItem from "@/components/Cars/Item.astro";
 import SortSelect from "@/components/Cars/SortSelect.astro";
 import SeoText from '@/components/Seo/Index.astro';

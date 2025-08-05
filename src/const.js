@@ -14,17 +14,17 @@ import modelsData from '@/data/models.json';
 const { models } = modelsData;
 const groupModelsByBrand = groupArrayByKey(models.filter(model => model.show), 'mark_id');
 const children = Object.keys(groupModelsByBrand).reduce((acc, key) => {
-	acc[key] = groupModelsByBrand[key].map(model => ( { url: `models/${model.id}/`, name: `${model.name.toUpperCase()}`, thumb: model.thumb } ) );
+	acc[key] = groupModelsByBrand[key].map(model => ( { url: `/models/${model.id}/`, name: `${model.name.toUpperCase()}`, thumb: model.thumb } ) );
 	return acc;
 }, {});
 export const LINKS_MENU = [
-	{url: 'request-kz/', name: 'Заказ авто из KZ'},
-	{url: 'cars/', name: 'Авто в наличии'},
+	{url: '/request-kz/', name: 'Заказ авто из KZ'},
+	{url: '/cars/', name: 'Авто в наличии'},
 	// {url: 'catalog/', name: 'Каталог'},
-	{url: 'used_cars/', name: 'Авто с пробегом'},
+	{url: '/used_cars/', name: 'Авто с пробегом'},
 	// {url: 'used_cars/', name: 'Авто с пробегом'},
 	{ 
-		url: 'models/', 
+		url: '/models/', 
 		name: 'Модели',
 		children
 	},
@@ -33,8 +33,8 @@ export const LINKS_MENU = [
 	// {url: 'news/', name: 'Новости'},
 	// {url: 'test-drive/', name: 'Запись на тест-драйв'},
 	{url: 'https://service.kia-samara.ru/?utm_source=promo', name: 'Запись на сервис'},
-	{url: '#services', name: 'Услуги'},
-	{url: 'contacts/', name: 'Контакты'},
+	{url: '/#services', name: 'Услуги'},
+	{url: '/contacts/', name: 'Контакты'},
 ];
 
 // Коллекции

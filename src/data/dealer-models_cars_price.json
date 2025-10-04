@@ -10,5 +10,11 @@
     "model": "Sorento",
     "price": 5549900,
     "benefit": 550000
+  },
+  {
+    "brand": "KIA",
+    "model": "Sportage",
+    "price": 3650000,
+    "benefit": 550000
   }
 ]

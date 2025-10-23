@@ -1,6 +1,12 @@
 [
   {
     "brand": "KIA",
+    "model": "Seltos",
+    "price": 3600000,
+    "benefit": 550000
+  },
+  {
+    "brand": "KIA",
     "model": "Sorento",
     "price": 5549900,
     "benefit": 550000

@@ -40,13 +40,13 @@ export const breadcrumb = { name: "Авто с пробегом", href: "/used_c
 				{models.length && (
 					<div class="flex flex-wrap gap-2 sm:gap-4">
 						<button 
-							class="filter-model-link"
+							class="filter-model-link text-xs sm:text-base py-2 px-2 sm:px-4 no-underline rounded-md m-0"
 							:class="currentModel === 'all' ? 'bg-accent-500 text-white' : 'bg-gray-200'"
 							@click.prevent="filteredCars('all')"
 						>Все</button>
 						{models.map(model => (
 							<button
-								class="filter-model-link"
+								class="filter-model-link text-xs sm:text-base py-2 px-2 sm:px-4 no-underline rounded-md m-0"
 								:class={`currentModel === '${model.toLowerCase()}' ? 'bg-accent-500 text-white' : 'bg-gray-200'`}
 								@click.prevent={`filteredCars('${model.toLowerCase()}')`}
 							>{model}</button>
@@ -66,9 +66,3 @@ export const breadcrumb = { name: "Авто с пробегом", href: "/used_c
 	<br><br>
 	<SeoText mdx="used_cars" noPadding />
 </PageLayout>
-
-<style>
-	.filter-model-link{
-		@apply text-xs sm:text-base py-2 px-2 sm:px-4 no-underline rounded-md m-0;
-	}
-</style>

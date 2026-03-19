@@ -94,6 +94,7 @@ jobs:
         npm install -g pnpm
         pnpm install --no-frozen-lockfile
         pnpm downloadCommonRepo -f settings.json,env.json --skip-model-sections
+        cat .env
       env:
         JSON_REPO: ${{ secrets.JSON_REPO }}
         DOMAIN: ${{ vars.DOMAIN }}

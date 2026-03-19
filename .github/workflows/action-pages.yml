@@ -169,6 +169,7 @@ jobs:
         if: steps.check_changes.outputs.changes == 'true'
         run: |
           pnpm downloadCommonRepo
+          cat .env
         env:
           JSON_REPO: ${{ secrets.JSON_REPO }}
           DOMAIN: ${{ vars.DOMAIN }}

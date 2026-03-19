@@ -1,1 +1,8 @@
-[]
+[
+  {
+    "brand": "Kia",
+    "model": "Sportage",
+    "price": 4249000,
+    "benefit": 550000
+  }
+]

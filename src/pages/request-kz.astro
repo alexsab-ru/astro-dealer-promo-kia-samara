@@ -5,8 +5,7 @@ import Checkbox from '@/components/Checkbox/Checkbox.astro';
 import Input from '@/components/Input.astro';
 import ChoosingDealerSelect from '@/components/ChoosingDealerSelect/ChoosingDealerSelect.astro';
 import settings from '@/data/site/settings.json';
-const { site_name, brand, legal_entity, legal_inn, legal_city } = settings;
-import {AGREE_LABEL} from '@/const';
+const { site_name, brand, legal_entity, legal_inn, legal_city, agree_label } = settings;
 import salonsData from '@/data/site/salons.json';
 const salons = salonsData.filter(salon => !salon.type || salon.type.includes('import'));
 ---
@@ -169,7 +168,7 @@ const salons = salonsData.filter(salon => !salon.type || salon.type.includes('im
 			<ChoosingDealerSelect required={true} salons={salons} />
 			<Checkbox
 				name="agree"
-				label={AGREE_LABEL}
+				label={agree_label}
 				color="black"
 				required
 				errorClasses="text-red-500 w-full"
